@@ -2,11 +2,14 @@ var db = require('./data/db')
 
 module.exports = {
   getIndex: getIndex,
-  newWord: newWord
+  newWord: newWord,
+  deleteWords: deleteWords
 }
 
 function getIndex(req, res) {
-  res.render('home')
+  db.getWords(function (err, words) {
+  })
+  res.render('home', wordJson)
 }
 
 function newWord(req, res) {
@@ -14,7 +17,11 @@ function newWord(req, res) {
     id: "",
     word: req.body.word
   }
-  db.saveWords(newWord, function (err) {
+  db.saveWord(newWord, function (err) {
     res.direct('/')
   })
+}
+
+function deleteWords () {
+  
 }
