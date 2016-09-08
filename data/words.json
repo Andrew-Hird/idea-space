@@ -1,17 +1,1 @@
-[
-  {
-    "id": 1,
-    "word": "Placeholder",
-    "color": "rgb(255, 0, 0)",
-    "font": "helvetica",
-    "position": "",
-    "size": "1em"
-  },{
-    "id": 2,
-    "word": "Another Placeholder",
-    "color": "rgb(0, 255, 0)",
-    "font": "helvetica",
-    "position": "",
-    "size": "1em"
-  }
-]
+[{"id":1,"word":"Placeholder","color":"rgb(255, 0, 0)","font":"helvetica","position":"","size":"1em"},{"id":2,"word":"Another Placeholder","color":"rgb(0, 255, 0)","font":"helvetica","position":"","size":"1em"},{"id":3,"word":"asdasd"}]

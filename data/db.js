@@ -10,30 +10,30 @@ module.exports = {
 var wordsFile = path.join(__dirname, 'words.json')
 
 // Method to show all current words
-function getWords(cb) {
+function getWords(callback) {
   fs.readFile(wordsFile, function (err, buffer) {
     if (err) {
-      return cb(err)
+      return callback(err)
     }
-    var wordJson = budffer.toString()
-    cb(null, JSON.parse(wordJson))
+    var wordJson = buffer.toString()
+    callback(null, JSON.parse(wordJson))
   })
 }
 
 // Method to save a new word
 function saveWord(word, callback) {
-  fs.readFile(wordsFile, function (err, callback) {
+  fs.readFile(wordsFile, function (err, data) {
     if (err) {
-      return cb(err)
+      return callback(err)
     }
 
-    var words = JSON.parse(buffer)
+    var words = JSON.parse(data)
     word.id = words.length + 1
     words.push(word)
     var jsonString = JSON.stringify(words)
 
     fs.writeFile(wordsFile, jsonString, function (err) {
-      cb(err)
+      callback(err)
       console.log(`${word} added to file`)
     })
   })
@@ -43,7 +43,7 @@ function saveWord(word, callback) {
 function deleteWords(words, callback) {
   fs.readFile(wordsFile, function (err, callback) {
     if (err) {
-      return cb(err)
+      return callback(err)
     }
 
     var words = Json.parse(buffer)
@@ -51,7 +51,7 @@ function deleteWords(words, callback) {
     var jsonString = JSON.stringify(words)
 
     fs.writeFile(wordsFile, function (err, callback) {
-      cb(err)
+      callback(err)
       console.log("words deleted")
     })
   })

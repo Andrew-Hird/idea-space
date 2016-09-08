@@ -8,8 +8,11 @@ module.exports = {
 
 function getIndex(req, res) {
   db.getWords(function (err, words) {
+    var vm = {
+      words: words
+    }
+    res.render('home', vm)
   })
-  res.render('home', wordJson)
 }
 
 function newWord(req, res) {
@@ -18,10 +21,10 @@ function newWord(req, res) {
     word: req.body.word
   }
   db.saveWord(newWord, function (err) {
-    res.direct('/')
+    res.redirect('/')
   })
 }
 
 function deleteWords () {
-  
+
 }
