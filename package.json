@@ -1,0 +1,30 @@
+{
+  "name": "idea-space",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node-inspector & nodemon --debug server",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-Hird/idea-space.git"
+  },
+  "author": "Tim Sam Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrew-Hird/idea-space/issues"
+  },
+  "homepage": "https://github.com/Andrew-Hird/idea-space#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.10.2"
+  }
+}
