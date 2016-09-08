@@ -1,0 +1,4 @@
+function (err, callback) {
+      // callback(err)
+      console.log("words deleted")
+    }

@@ -41,16 +41,16 @@ function saveWord(word, callback) {
 
 // Method to clear the page of all words
 function deleteWords(words, callback) {
-  fs.readFile(wordsFile, function (err, callback) {
+  fs.readFile(wordsFile, function (err, data) {
     if (err) {
       return callback(err)
     }
 
-    var words = Json.parse(buffer)
+    var words = JSON.parse(data)
     words = []
     var jsonString = JSON.stringify(words)
 
-    fs.writeFile(wordsFile, function (err, callback) {
+    fs.writeFile(wordsFile, jsonString, function (err) {
       callback(err)
       console.log("words deleted")
     })

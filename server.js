@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //routes
 app.get('/', routes.getIndex)
 app.post('/new-word', routes.newWord)
+app.post('/delete-word', routes.deleteW)
 
 app.listen(PORT, function () {
   console.log('holla on port', PORT)
