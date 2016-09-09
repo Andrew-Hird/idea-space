@@ -6,7 +6,8 @@
   </head>
   <body>
     {{#each words}}
-      {{word}}
+    <div class="contentContainer" id="{{layout_id}}">
+    </div>
     {{/each}}
     <form action="/new-word" method="post">
       <input type="text" name="word"
