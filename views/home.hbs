@@ -8,15 +8,25 @@
   <body>
     {{#each words}}
     <div class="contentContainer" id="{{layout_id}}">
+      {{word}}
     </div>
     {{/each}}
-    <form action="/new-word" method="post">
-      <input type="text" name="word"
-      placeholder="enter idea here">
-      <input type="submit" name="submit" value="Submit">
-    </form>
-    <form action="/delete-word" method="post">
-      <input type="submit" name="delete" value="Clear">
-    </form>
+    <div class="formStuff">
+      <form action="/new-word" method="post">
+        <input type="text" name="word"
+        placeholder="holla" id="inputField" maxlength="15">
+        <!-- <input type="submit" name="submit" value="Submit"> -->
+      </form>
+      <form action="/delete-word" method="post">
+        <input type="submit" name="delete" value="clear" id="clearButton">
+      </form>
+    </div>
   </body>
+  <script type="text/javascript">
+    window.onload = function(){
+      var text_input = document.getElementById ('inputField');
+      text_input.focus ();
+      text_input.select ();
+    }
+</script>
 </html>

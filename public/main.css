@@ -1,7 +1,52 @@
+body {
+  background-color: steelblue;
+  color: rgb(240, 240, 240);
+  font-size: 1.6em;
+  font-family: sofia;
+}
+
+@font-face {
+  src: url("SofiaProLight-webfont.ttf");
+  font-family: sofia;
+}
+
+.formStuff {
+  width: 35%;
+  height:auto;
+  margin: 300px auto;
+}
+
+#inputField {
+  max-width:100%;
+  height:auto;
+  font-size: 2.2em;
+
+  border-radius: 20px;
+  border: none;
+
+  text-align: center;
+  color: steelblue;
+}
+
+#inputField:focus {
+  outline: none;
+}
+
+#clearButton {
+  float:right;
+  border: none;
+  background-color: steelblue;
+  color: rgb(102, 171, 229);
+  font-size: 1.4em;
+
+
+  text-align: right;
+  margin: 0px auto;
+}
 
 #num_1 {
   position: absolute;
-  left: 50%;
+  left: 30%;
   top: 60%;
 }
 #num_2 {
@@ -16,7 +61,7 @@
 }
 #num_4 {
   position: absolute;
-  left: 90%;
+  left: 80%;
   top: 5%;
 }
 #num_5 {

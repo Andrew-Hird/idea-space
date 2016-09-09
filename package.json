@@ -20,8 +20,10 @@
   "homepage": "https://github.com/Andrew-Hird/idea-space#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.7.0"
   },
   "devDependencies": {
     "node-inspector": "^0.12.8",

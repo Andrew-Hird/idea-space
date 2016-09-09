@@ -21,9 +21,14 @@ function getIndex(req, res) {
 function newWord(req, res) {
   var newWord = {
     id: "",
+    layout_id: "",
     word: req.body.word
+
   }
   db.saveWord(newWord, function (err) {
+    if (err) {
+      console.error(err.message)
+    }
     res.redirect('/')
   })
 }

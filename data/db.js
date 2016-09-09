@@ -29,12 +29,12 @@ function saveWord(word, callback) {
 
     var words = JSON.parse(data)
     word.id = words.length + 1
+    word.layout_id = "num_" + (words.length + 1)
     words.push(word)
     var jsonString = JSON.stringify(words)
 
     fs.writeFile(wordsFile, jsonString, function (err) {
       callback(err)
-      console.log(`${word} added to file`)
     })
   })
 }
