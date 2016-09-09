@@ -7,7 +7,7 @@
   </head>
   <body>
     {{#each words}}
-    <div class="contentContainer" id="{{layout_id}}">
+    <div class="contentContainer"  id="{{layout_id}}">
       {{word}}
     </div>
     {{/each}}
@@ -24,9 +24,9 @@
   </body>
   <script type="text/javascript">
     window.onload = function(){
-      var text_input = document.getElementById ('inputField');
-      text_input.focus ();
-      text_input.select ();
+      var text_input = document.getElementById ('inputField')
+      text_input.focus ()
+      text_input.select ()
     }
 </script>
 </html>
