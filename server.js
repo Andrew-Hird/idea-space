@@ -6,7 +6,8 @@ var morgan = require('morgan')
 
 var routes = require ('./routes')
 
-var PORT = 3000
+var port = process.env.PORT || 3000
+
 var app = express()
 app.use(morgan('combined'))
 app.engine('hbs', hbs())
