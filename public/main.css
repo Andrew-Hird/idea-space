@@ -20,6 +20,14 @@ body {
     width: 35%;
     height: auto;
     margin: 300px auto;
+  }
+
+
+.instructions {
+  position: absolute;
+  top: 80%;
+  left: 84%;
+  font-size: 0.5em;
 }
 
 #inputField {
